@@ -1,0 +1,9 @@
+server:
+  port: 8079
+
+spring:
+  data:
+    mongodb:
+      host: enggadda
+      port: 27017
+      database: Testing

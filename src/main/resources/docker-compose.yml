@@ -1,0 +1,21 @@
+version: "3.8"
+services:
+  enggadda:
+    image: mongo:latest
+    container_name: "enggadda"
+    ports:
+      - 27017:27017
+    volumes:
+          - data:/data/db
+
+  dockertest:
+    image: dockertest:latest
+    container_name: "dockertest"
+    ports:
+      - 8079:8079
+    depends_on:
+      - enggadda
+    restart: always
+
+volumes:
+  data:
